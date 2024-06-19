@@ -28,27 +28,35 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* END CSS RESET */
 
-* {
-        outline: 1px solid red;
-}
-
 body {
+        height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        align-items:center;
+        justify-content: space-between;
+        align-items: center;
 }
 
 .PixelContainer {
         display: flex;
-        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
         flex-wrap: wrap;
 }
 
 .Pixel {
-        flex-shrink: 0;
+        border: 1px solid #4f4f4f55;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+}
+
+.mFilled {
+        background-color: #ff5656;
+        border: none;
 }
 
 .Pixel:hover {
-        background-color: #555;
+        background-color: #ff5656;
 }
