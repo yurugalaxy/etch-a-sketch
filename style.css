@@ -28,12 +28,74 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* END CSS RESET */
 
+* {
+        font-family: sans-serif;
+}
+
 body {
         height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: center;
+        background-color: #3c4049;
+        gap: 20px;
+}
+
+label {
+        color: #beadbe;
+}
+
+.Input {
+        align-self: center;
+}
+
+.Header {
+        background-color: #64258b;
+        color: #beadbe;
+        max-height: 150px;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        font-size: 24px;
+        font-weight: bold;
+        outline: 1px solid #beadbe;
+        box-shadow: inset 0 0 15px #2b2b2b;
+}
+
+.Content {
+        display: flex;
+        gap: 50px;
+        padding: 50px;
+}
+
+.ToolsContainer {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        gap: 10px;
+        padding: 10px;
+        background-color: #2b2b2b;
+        box-shadow: 0 0 25px #2b2b2b;
+}
+
+.mTool, .CreatePixels, .TotalInput {
+        background-color: #2f3136;
+        border: 1px solid #595d68;
+        color: #beadbe;
+}
+
+.mTool:hover, .CreatePixels:hover {
+        background-color: #64258b;
+}
+
+.CreatePixels, .TotalInput {
+        width: 100px;
+        height: 35px;
+}
+
+.mTool {
+        width: 50px;
+        height: 50px;
 }
 
 .PixelContainer {
@@ -41,10 +103,14 @@ body {
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+        outline: 20px solid #2b2b2b;
+        box-shadow: 0 0 55px #2b2b2b;
+        background-color: #2b2b2b;
 }
 
 .Pixel {
-        border: 1px solid #4f4f4f55;
+        background-color: #fff;
+        outline: 1px solid #4f4f4f33;
         user-select: none;
         -moz-user-select: none;
         -webkit-user-drag: none;
@@ -52,11 +118,19 @@ body {
         -ms-user-select: none;
 }
 
-.mFilled {
-        background-color: #ff5656;
-        border: none;
+.GridSize {
+        padding-left: 200px;
+        color: #beadbe;
+        margin-top: -50px;
 }
 
-.Pixel:hover {
-        background-color: #ff5656;
+.Footer {
+        background-color: #2b2b2b;
+        color: #beadbe;
+        max-height: 35px;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        font-size: 12px;
+        outline: 1px solid #beadbe;
 }

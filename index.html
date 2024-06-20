@@ -8,12 +8,21 @@
         <script src="script.js" defer></script>
 </head>
 <body>
-        <div class="Header">
-                <input class="TotalInput" type="number">
+        <div class="Header">Pixely</div>
+        <div class="Input">
+                <label for="GridInput">Grid size:</label>
+                <input id="GridInput" class="TotalInput" type="number" value="16">
                 <button class="CreatePixels">Create</button>
         </div>
-        <div class="PixelContainer">
+        <div class="Content">
+                        <div class="ToolsContainer">
+                                <button class="Brush mTool">🖌️</button>
+                                <button class="Eraser mTool">⛔</button>
+                                <button class="ColorPick mTool">🎨</button>
+                        </div>
+                        <div class="PixelContainer"></div>
         </div>
+        <div class="GridSize">Current grid:</div>
         <div class="Footer">Made by Kae :3</div>
 </body>
 </html>
