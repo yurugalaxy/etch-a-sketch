@@ -1,9 +1,19 @@
 const pixelContainer = document.querySelector(".PixelContainer"),
 createBtn = document.querySelector(".CreatePixels"),
-winWidth = window.innerWidth,
+winWidth = window.innerWidth -250,
 winHeight = window.innerHeight - 250,
 input = document.querySelector(".TotalInput"),
-gridSize = document.querySelector(".GridSize");
+gridSize = document.querySelector(".GridSize"),
+tools = document.querySelectorAll(".mTool");
+
+let currentTool = "Brush";
+
+
+tools.forEach((tool) => {
+        tool.addEventListener("click", () => {
+        currentTool = tool.id;
+        });
+});
 
 createBtn.addEventListener("click", () => {
         CreatePixels(parseInt(input.value));
@@ -45,7 +55,11 @@ function CreatePixels(size) {
 };
 
 function Paint(event) {
-        event.target.style.backgroundColor = "#ff0000";
+        if (currentTool === "Brush") {
+                event.target.style.backgroundColor = "#ff0000";
+        } else if (currentTool === "Eraser") {
+                event.target.style.backgroundColor = "#ffffff";
+        }
 }
 
 function Start() {
